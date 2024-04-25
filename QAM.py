@@ -14,6 +14,7 @@ def answer_question(context, question):
 
 if __name__ == "__main__":
     # Example context and question
+    question = ''
     context = """
     Transformers (formerly known as pytorch-transformers and pytorch-pretrained-bert) provides general-purpose architectures (BERT, GPT-2, RoBERTa, XLM, DistilBert, XLNet…) for Natural Language Understanding (NLU) and Natural Language Generation (NLG) with over 32+ pretrained models in 100+ languages and deep interoperability between TensorFlow 2.0 and PyTorch.
     Species Name,
@@ -30,11 +31,10 @@ Scientific name: Esox lucius (Esox comes from the old name for pike in Europe an
     Common name: Black crappie,"Scientific name: Pomoxis nigromaculatus (Pomoxis means ""sharp opercle (cheek)""; nigromaculatus means ""black spotted"")","Distribution: The black crappie occurs in all three drainage basins in Wisconsin (Lake Michigan, Mississippi River, and Lake Superior). This glacial species is well distributed throughout the state, except in the streams of the driftless area of southwestern Wisconsin.","Spawning:  In Wisconsin, the black crappie usually spawns in May and June; however, during a colder season, spawning may be delayed until July. Favorable spawning temperatures range from 64 to 68� F. The male sweeps out a nest in the sand or fine gravel and guards the nest and defends the young until they start to feed.","Angling: The black crappie is considered an excellent game fish when taken on light tackle. Extreme care must be taken in landing these fish because their mouths are very tender. Anglers specializing in catching black crappie know that to be successful the bait must be kept constantly moving. The best baits are small minnows, small maribou-covered jigs, plastic minnows, or small streamer flies cast along the outer edges of weed beds. The crappie lies in weed beds in deep water during the day and bites best in the early morning or toward evening. In summer, with the abundance of small fish for feed, they are more difficult to catch. Small minnows are used as bait in winter."
     Micropterus salmoides (Micropterus means ""small fin""; salmoides means ""trout-like"" in gameness and food).","The largemouth bass occurs in all three drainage basins in Wisconsin (Lake Michigan, Mississippi River, and Lake Superior); it is least widespread in the driftless area of southwestern Wisconsin. Wisconsin is near the northern limit of distribution, and it has been suggested that its presence in the state, especially in the northern counties, resulted from introductions.","The spawning of largemouth bass in Wisconsin occurs from late April to early July. The selection of nest sites begin when water temperatures reach 60� F, and eggs are laid when the water temperatures are at 62 - 65� F. The male largemouth bass usually selects a sand or gravel bottom upon which to build a nest; however, the fish will also nest on soft bottoms, where they are able to expose such hard objects as roots, twigs, and snail shells on which to deposit the eggs. Territorial defense against intruders is practiced by the largemouth bass as it is by other sunfishes.","Largemouth bass will bite on almost anything. They can be caught on minnows, worms, or other live bait, plus poppers or streamers presented with a fly rod, or plugs thrown from a casting or spinning rod. Because the bass is usually associated with weeds, a weedless bait will often be necessary. Best fishing times are early morning and evening during the warm months. Bass like warm water and warm weather. Few bite in the winter."
     """
-
-    question = "Where do largemouth bass spawn?"
+    while question != "q":
+        question = input("Enter you question here:")
 
     # Get the answer
-    answer = answer_question(context, question)
+        answer = answer_question(context, question)
 
-    print("Question:", question)
-    print("Answer:", answer)
+        print("Answer:", answer)
